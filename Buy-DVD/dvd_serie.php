@@ -79,10 +79,6 @@ else{
 
 
 ?>
-<style>
-
-</style>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,6 +90,7 @@ else{
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/moovieseries_tv.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bodoni 72" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -146,15 +143,15 @@ else{
 
 				<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
-					<div class="row d-flex mt-5">
+					<div class="row mt-5">
 
-							 <div class="col-md-2">
+							 <div class="col-md-3">
 
 									<p class="text-secondary">Réalisateurs:</p>
 
 							 </div>
 
-							 <div class="col-md-4">
+							 <div class="col-md-7">
 
 										<div class="realisateur"><?php echo $dvd_serie ['realisateur']; ?></div> <br>
 							 </div>
@@ -162,13 +159,13 @@ else{
 
 					<div class="row">
 
-							 <div class="col-md-2">
+							 <div class="col-md-3">
 
-										<p class="text-secondary">Acteurs : </p>
+										<p class="text-secondary">Acteurs: </p>
 
 							 </div>
 
-							 <div class="col-md-8">
+							 <div class="col-md-7">
 
 								 <div class="acteur"><?php echo $dvd_serie ['acteur']; ?></div> <br>
 
@@ -177,13 +174,13 @@ else{
 
 					<div class="row">
 
-							 <div class="col-md-2">
+							 <div class="col-md-3">
 
-										<p class="text-secondary">Format : </p>
+										<p class="text-secondary">Format: </p>
 
 							 </div>
 
-							 <div class="col-md-8">
+							 <div class="col-md-7">
 
 								 <div class="acteur"><?php echo $dvd_serie ['format']; ?></div> <br>
 
@@ -191,13 +188,13 @@ else{
 					</div>
 					<div class="row">
 
-							 <div class="col-md-2">
+							 <div class="col-md-3">
 
 										<p class="text-secondary">Date de parusion: </p>
 
 							 </div>
 
-							 <div class="col-md-8">
+							 <div class="col-md-7">
 
 								 <div class="acteur"><?php echo $dvd_serie ['created_at']; ?></div> <br>
 
@@ -206,7 +203,7 @@ else{
 
 					<button type="button" class="button btn">
 
-						<a href="#caracteristique">Plus de caractéristique
+						<a href="#caracteristique">Plus de caractéristiques
 						</a>
 					</button>
                 </div>
@@ -221,10 +218,70 @@ else{
 
 
 <style>
+.pictures{
+  width: 90px;
+  height: 160px;
+}
 @media(max-width: 425px){
 	.test{
-		width: 200px;
+		width: 300px;
 	}
+	.buttontwo{
+		margin-left: 90px;
+	}
+	.viewTwo{
+		margin-top:10px;
+	}
+	.livraison{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: -60px;
+
+	}
+	.prise{
+    margin-left: 40px;
+		height: 295px;
+
+  }
+	.contact{
+		width: 80px;
+	}
+	.pictures{
+	  height: 200px;
+	  width: 140px;
+	}
+
+}
+@media(max-width: 768px){
+.buttonThree{
+	background-color: white;
+	height: 40px;
+}
+.buttonThree a{
+	margin-left: -30px;
+}
+.view{
+	 margin-left: 15px;
+
+}
+.buttontwo{
+	margin-left: 90px;
+}
+.prise{
+  margin-left: 40px;
+  width: 320px;
+	height: 300px;
+}
+.livraison{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -60px;
+
+}
 }
 </style>
 		<div class="prise borderOne border border-secondary mt-4">
@@ -244,7 +301,7 @@ else{
                         <div>Prix</div>
                         <div class="prix text-danger"><h4><?php echo $dvd_serie['prix']; ?></h4></div> <br>
                     </div> <br>
-                    <div class="row d-flex justify-content-around"> <br>
+                    <div class="livraison row d-flex justify-content-around"> <br>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="customCheck1">
                             <label class="custom-control-label" for="customCheck1">Livraison Gratuite</label>
@@ -261,7 +318,7 @@ else{
                        <a href="">Ajouter au panier </a>
 											</button>
 										</form>
-                    <a href="#" class="bg-light  pb-3 text-center">
+                    <a href="#" class="bg-light pb-3 text-center mt-3">
 
                         Voir toutes les options et délais de livraison
                     </a>
@@ -274,7 +331,7 @@ else{
                         <div>Prix</div>
                         <div class="prix text-danger"><h4><?php echo $dvd_serie['prix2']; ?></h4></div> <br>
                     </div> <br>
-                    <div class="row d-flex justify-content-around"> <br>
+                    <div class="livraison row d-flex justify-content-around"> <br>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="customCheck1">
                             <label class="custom-control-label" for="customCheck1">Livraison Gratuite</label>
@@ -290,7 +347,7 @@ else{
 													<a href="">  Ajouter au panier
 													</a>
 												</button>
-                        <a href="#" class="bg-light mt-4 pb-3 text-center">
+                        <a href="#" class="bg-light pb-3 text-center mt-3">
 
                             Voir toutes les options et délais de livraison
                         </a>
@@ -315,7 +372,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie['imageOne'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="button btn mt-1 ml-4 col-9">
+                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
 
                                 <a href="#">  Voir le Produit
                                 </a>
@@ -326,7 +383,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie ['imageTwo'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="button btn mt-1 ml-4 col-9">
+                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
 
                                 <a href="#"> Voir le Produit
                                 </a>
@@ -337,7 +394,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie ['imageThree'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="button btn mt-1 ml-4 col-9">
+                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
 
                                 <a href="#">  Voir le Produit
                                 </a>
@@ -348,7 +405,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie ['imageFoor'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="button btn mt-1 ml-4 col-9">
+                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
 
                                 <a href="#"> Voir le Produit
                                 </a>
@@ -359,7 +416,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie ['imageFive'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="button btn mt-1 ml-4 col-9">
+                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
 
                                 <a href="">  Voir le Produit
                                 </a>
@@ -386,11 +443,11 @@ else{
 
 <?php foreach ($commentaire as $key => $value):?>
 <div class="col-12 row view">
-	<div class="mt-3 col-md-3 bg-dark d-flex justify-content-center flex-column">
-		<img src="img/contacte.png" alt="contacte" class="col-5 m-auto contact"/>
+	<div class="mt-3 col-md-3 bg-dark d-flex justify-content-center flex-column" style="color:#1582D6;">
+		<i class="fa fa-user-o m-auto" style="font-size:36px;"></i>
 <h5 class="text-center text-white mb-4"><?php echo $value['speudo']; ?></h5>
 	</div>
-	<div class="mt-3 col-md-9 bg-white">
+	<div class="mt-3 col-md-9 bg-white border borderdark">
 	<p><?php echo $value['objet']; ?></p>
 	<p class="text-secondary">Posté le : <?php echo $value['created_at']; ?></p>
 	<p><?php echo $value['avis']; ?></p>
@@ -412,7 +469,7 @@ Pas encore de commentaire pour ce produit
 	<div class="Commentaireid col-md-3 d-flex justify-content-end">
 
 
-	 <form class="d-flex  flex-column m-auto align-items-center" action="dvd_serie.php?dvd_serie_id=<?php echo $dvd_serie['id'];?>" method="post">
+	 <form class="d-flex flex-column m-auto align-items-center" action="dvd_serie.php?dvd_serie_id=<?php echo $dvd_serie['id'];?>" method="post">
 
 			<h5>Laisser un commentaire</h5>
 
@@ -455,7 +512,7 @@ Pas encore de commentaire pour ce produit
 	  <tbody>
 	    <tr>
 	      <td>Réalisateur</td>
-	      <td><?php echo $dvd_serie ['realisateur']; ?></td>
+	      <td class="realisateur"><?php echo $dvd_serie ['realisateur']; ?></td>
 	    </tr>
 	    <tr>
 	      <td>Acteur</td>

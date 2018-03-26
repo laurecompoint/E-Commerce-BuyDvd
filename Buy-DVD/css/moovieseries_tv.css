@@ -28,8 +28,8 @@ a:hover{
   width: 150px;
 }
 .pictures{
-  height: 200px;
-  width: 140px;
+  width: 90px;
+  height: 160px;
 }
 .borderOne{
   height: 270px;
@@ -62,7 +62,11 @@ a:hover{
 .contact{
   height:40px
 }
-
+.background{
+  background-image: url(img/imgserie/imgcategory/bannieredvd.png);
+  background-size: 1210px;
+  height:100px;
+}
 @media(max-width: 768px){
 .text{
   margin-left: 40px;
@@ -76,6 +80,7 @@ a:hover{
 .prise{
   margin-left: 40px;
   width: 320px;
+  height: 300px;
 }
 .pictures{
   width: 90px;
@@ -88,13 +93,40 @@ margin-left: -40px;
 .CommentaireId{
     margin-bottom:220px;
 }
+.background{
+  background-image: none;
+}
+.livraison{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -60px;
+
+}
+.buttonThree{
+	background-color: white;
+	height: 40px;
+}
+.buttonThree a{
+	margin-left: -30px;
+}
+.view{
+	 margin-left: 15px;
+
+}
+.buttontwo{
+	margin-left: 90px;
+}
 
 }
 @media(max-width: 425px){
   .logo{
       width: 150px;
   }
-
+  .test{
+		width: 300px;
+	}
   .picture{
     margin-left: 10px;
 
@@ -108,6 +140,7 @@ margin-left: -40px;
   }
   .prise{
     margin-left: 40px;
+    height: 295px;
 
   }
   #banniere_image{
@@ -122,5 +155,36 @@ margin-left: -40px;
   .Commentaireid{
   	margin-top: 170px;
   }
+  .buttontwo{
+		margin-left: 90px;
+	}
+	.viewTwo{
+		margin-top:10px;
+	}
+	.livraison{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: -60px;
+
+	}
+  .background{
+    background-image: none;
+  }
+  .logo_moovieserie{
+    margin-top: 100px;
+  }
+  .margin{
+    margin-top: 50px;
+  }
+  .contact{
+		width: 80px;
+	}
+	.pictures{
+	  height: 200px;
+	  width: 140px;
+	}
+}
 
 }

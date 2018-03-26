@@ -78,12 +78,38 @@ else{
 
   <div class="name text-center text-white">
 
-   <h2><?php if(isset($categoriefilm)) : ?><div id="banniere_image" class="col-12 d-flex align-items-center justify-content-center" style="height:100px;background: url('img/imgserie/imgcategory/<?php  echo $categoriefilm ['image'];?>'); background-repeat:no-repeat; background-size: 1450px;"><?php echo $categoriefilm['name'];?></div><?php else : ?><h1 class="color d-flex align-items-center justify-content-center" style="height:100px;background: url(img/imgserie/imgcategory/bannieredvd.png); background-size: 1210px;"> <img src="img/film.png" alt="logo films" class="col-md-3"/> <?php endif; ?> </h2>
+   <h2><?php if(isset($categoriefilm)) : ?><div id="banniere_image" class="col-12 d-flex align-items-center justify-content-center" style="height:100px;background: url('img/imgserie/imgcategory/<?php  echo $categoriefilm ['image'];?>'); background-repeat:no-repeat; background-size: 1450px;"><?php echo $categoriefilm['name'];?></div><?php else : ?><h1 class="color background d-flex align-items-center justify-content-center">
+     <img src="img/film.png" alt="logo films" class="logo_moovieserie col-md-3"/>
+   <?php endif; ?> </h2>
 
   </div>
 
   </header>
+<style>
+.background{
+  background-image: url(img/imgserie/imgcategory/bannieredvd.png);
+  background-size: 1210px;
+  height:100px;
+}
+@media(max-width: 425px){
+  .background{
+    background-image: none;
+  }
+  .logo_moovieserie{
+    margin-top: 100px;
+  }
+  .margin{
+    margin-top: 50px;
+  }
+}
+@media(max-width: 768px){
+  .background{
+    background-image: none;
+  }
 
+}
+
+</style>
 
   <?php if(!empty($dvd_film)):?>
   <?php foreach($dvd_film as $key => $dvd_film): ?>
@@ -93,7 +119,7 @@ else{
   <div class="row d-flex justify-content-center mt-5">
 
 
-        <div class="picture col-md-3">
+        <div class="margin picture col-md-3">
 
           <img src="img/imgfilm/imgproduit/<?php echo $dvd_film['image'];?>" class="picture mt-5"/>
 

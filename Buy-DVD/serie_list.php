@@ -82,7 +82,9 @@ else{
 
 
 
- <h2><?php if(isset($categorieserie)) : ?><div id="banniere_image" class="col-12 d-flex align-items-center justify-content-center" style="height:100px;background: url('img/imgserie/imgcategory/<?php  echo $categorieserie ['image'];?>'); background-repeat:no-repeat; background-size: 1450px;"><?php echo $categorieserie['name'];?></div><?php else : ?><h1 class="color d-flex align-items-center justify-content-center" style="height:100px;background: url(img/imgserie/imgcategory/bannieredvd.png); background-size: 1210px;"><img src="img/serie.png" alt="logo serie" class="col-md-3"/> </h1> <?php endif; ?> </h2>
+ <h2><?php if(isset($categorieserie)) : ?><div id="banniere_image" class="col-12 d-flex align-items-center justify-content-center" style="height:100px;background: url('img/imgserie/imgcategory/<?php  echo $categorieserie ['image'];?>'); background-repeat:no-repeat; background-size: 1450px;"><?php echo $categorieserie['name'];?></div><?php else : ?><h1 class="background color d-flex align-items-center justify-content-center">
+   <img src="img/serie.png" alt="logo serie" class="logo_moovieserie col-md-3"/> </h1>
+ <?php endif; ?> </h2>
 
 </div>
 
@@ -95,7 +97,7 @@ else{
     <div class="row d-flex justify-content-center mt-5">
 
 
-          <div class="picture col-md-3">
+          <div class="margin picture col-md-3">
 
               <img src="img/imgserie/imgproduit/<?php echo $dvd_serie['image'];?>" class="picture mt-5"/>
 

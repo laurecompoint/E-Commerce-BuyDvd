@@ -58,7 +58,7 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
     <div class="container card-columns">
 
         <div class="degrade card">
-            <a href="dvd_film.php?dvdmoovie_id=1"> <img id="devant" class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/comedie1.jpg" alt="Card image cap">
+            <a href="dvd_film.php?dvdmoovie_id=1"> <img id="devant" class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/comedie1.jpg" alt="Card image cap">
 
 
             </a>
@@ -70,7 +70,7 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
         </div>
 
         <div class="degrade card">
-          <a href="dvd_film.php?dvdmoovie_id=5">  <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/romance3.jpg" alt="Card image cap"> </a>
+          <a href="dvd_film.php?dvdmoovie_id=5">  <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/romance3.jpg" alt="Card image cap"> </a>
             <div class="card-body">
                 <a href="film_list.php?category_moovie_id=2"><h5 class="card-title text-center">Romance</h5></a>
 
@@ -78,7 +78,7 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
         </div>
 
         <div class="degrade card">
-          <a href="dvd_film.php?dvdmoovie_id=9">  <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/policier3.jpg" alt="Card image cap"></a>
+          <a href="dvd_film.php?dvdmoovie_id=9">  <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/policier3.jpg" alt="Card image cap"></a>
             <div class="card-body">
                 <a href="film_list.php?category_moovie_id=3">  <h5 class="card-title text-center">Policier/Drama</h5> </a>
 
@@ -87,21 +87,21 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
 
 
         <div class="degrade card">
-          <a href="dvd_film.php?dvdmoovie_id=4">  <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/overdrive.jpg" alt="Card image cap"> </a>
+          <a href="dvd_film.php?dvdmoovie_id=4">  <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/overdrive.jpg" alt="Card image cap"> </a>
             <div class="card-body">
                 <a href="film_list.php?category_moovie_id=4">  <h5 class="card-title text-center">Action/Aventure</h5> </a>
 
             </div>
         </div>
         <div class="degrade card">
-            <a href="dvd_film.php?dvdmoovie_id=14"> <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/fanstastique2.jpg" alt="Card image cap"> </a>
+            <a href="dvd_film.php?dvdmoovie_id=14"> <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/fanstastique2.jpg" alt="Card image cap"> </a>
             <div class="card-body">
                 <a href="film_list.php?category_moovie_id=5">  <h5 class="card-title text-center">Fantastique</h5> </a>
 
             </div>
         </div>
         <div class="degrade card">
-            <a href="dvd_film.php?dvdmoovie_id=16"> <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/dragon.jpg" alt="Card image cap"> </a>
+            <a href="dvd_film.php?dvdmoovie_id=16"> <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/dragon.jpg" alt="Card image cap"> </a>
             <div class="card-body">
                 <a href="film_list.php?category_moovie_id=6">  <h5 class="card-title text-center">Dessin Animé</h5> </a>
 
@@ -119,21 +119,21 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
 
   <div class="responsive container card-columns">
       <div class="degrade card">
-          <a href="dvd_serie.php?dvd_serie_id=1"> <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/friends.jpg" alt="image cap"> </a>
+          <a href="dvd_serie.php?dvd_serie_id=1"> <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/friends.jpg" alt="image cap"> </a>
           <div class="card-body">
               <a href="serie_list.php?category_serie_id=1"><h5 class="card-title text-center">Comédie</h5></a>
 
           </div>
       </div>
       <div class="degrade card">
-        <a href="dvd_serie.php?dvd_serie_id=4">  <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/beautyandthebeast.jpg" alt="Card image cap"> </a>
+        <a href="dvd_serie.php?dvd_serie_id=4">  <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/beautyandthebeast.jpg" alt="Card image cap"> </a>
           <div class="card-body">
               <a href="serie_list.php?category_serie_id=2"><h5 class="card-title text-center">Romance</h5></a>
 
           </div>
       </div>
       <div class="degrade card">
-        <a href="dvd_serie.php?dvd_serie_id=6">  <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/elementary1.jpg" alt="Card image cap"></a>
+        <a href="dvd_serie.php?dvd_serie_id=6">  <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/elementary1.jpg" alt="Card image cap"></a>
           <div class="card-body">
               <a href="serie_list.php?category_serie_id=3">  <h5 class="card-title text-center">Policier/Drama</h5> </a>
 
@@ -141,21 +141,21 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
       </div>
 
       <div class="degrade card">
-        <a href="dvd_serie.php?dvd_serie_id=11">  <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/flash.jpg" alt="Card image cap"> </a>
+        <a href="dvd_serie.php?dvd_serie_id=11">  <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/flash.jpg" alt="Card image cap"> </a>
           <div class="card-body">
               <a href="serie_list.php?category_serie_id=4">  <h5 class="card-title text-center">Action/Aventure</h5> </a>
 
           </div>
       </div>
       <div class="degrade card">
-          <a href="dvd_serie.php?dvd_serie_id=14"> <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/magisien.jpg" alt="Card image cap"> </a>
+          <a href="dvd_serie.php?dvd_serie_id=14"> <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/magisien.jpg" alt="Card image cap"> </a>
           <div class="card-body">
               <a href="serie_list.php?category_serie_id=5">  <h5 class="card-title text-center">Fantastique</h5> </a>
 
           </div>
       </div>
       <div class="degrade card">
-          <a href="dvd_serie.php?dvd_serie_id=16"> <img class="picture col-8 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/anime.jpg" alt="Card image cap"> </a>
+          <a href="dvd_serie.php?dvd_serie_id=16"> <img class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgserie/anime.jpg" alt="Card image cap"> </a>
           <div class="card-body">
               <a href="serie_list.php?category_serie_id=6">  <h5 class="card-title text-center">Dessin Animé</h5> </a>
 

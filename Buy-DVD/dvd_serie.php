@@ -223,7 +223,7 @@ else{
   height: 160px;
 }
 @media(max-width: 425px){
-	.test{
+	.prixproduit{
 		width: 300px;
 	}
 	.buttontwo{
@@ -286,7 +286,7 @@ else{
 </style>
 		<div class="prise borderOne border border-secondary mt-4">
 
-            <ul class="test nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+            <ul class="prixproduit nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item col-6">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Prix Standart</a>
                 </li>

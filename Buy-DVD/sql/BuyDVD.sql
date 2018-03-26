@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  lun. 26 mars 2018 à 12:58
+-- Généré le :  lun. 26 mars 2018 à 17:12
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -88,7 +88,7 @@ CREATE TABLE `commentaire` (
 --
 
 INSERT INTO `commentaire` (`id`, `speudo`, `objet`, `avis`, `created_at`, `is_published`) VALUES
-(1, 'Agathe', 'Très bon produit', 'Coffret de 10 étuis avec chacun 3 ou 4 DVD à l\'intérieur. 5 200 et quelques minutes de Friends à fond c\'est toop !! Remarque, les DVD ne sont pas numérotés à l\'intérieur de chaque étui, veiller à les remettre à leur bon emplacement pour ne pas s\'emmêler les pinceaux! \r\n', '2018-02-06', 1),
+(1, 'Agathe', 'Très bon produit', 'Coffret de 10 étuis avec chacun 3 ou 4 DVD à l\'intérieur. 5 200 et quelques minutes de Friends à fond c\'est toop !! ', '2018-02-06', 1),
 (2, 'Ferwann Grenoble', 'Génial !', 'Quand on ne connait absolument pas, on ne regrette pas du tout son achat ! On les aimes à la fin et on veut continuer de les suivre !', '2018-03-20', 1),
 (3, 'Emilie', 'Super', 'Livraison dans les temps , colis soigné', '2018-03-04', 1),
 (4, 'Virginie', 'super', 'j ai acheté ce dvd la semaine derniere j adore en +le prix etait en baisse', '2018-03-22', 1),

@@ -68,63 +68,65 @@ a:hover{
   height:100px;
 }
 @media(max-width: 768px){
-.text{
-  margin-left: 40px;
-}
-.borderOne{
-  width: 350px;
-}
-.picture{
-  margin-right: 30px;
-}
-.prise{
-  margin-left: 40px;
-  width: 320px;
-  height: 300px;
-}
-.pictures{
-  width: 90px;
-  height: 160px;
-}
 
-.product{
-margin-left: -40px;
-}
-.CommentaireId{
-    margin-bottom:220px;
-}
-.background{
-  background-image: none;
-}
-.livraison{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-top: -60px;
+  .text{
+    margin-left: 40px;
+  }
+  .borderOne{
+    width: 350px;
+  }
+  .picture{
+    margin-right: 30px;
+  }
+  .prise{
+    margin-left: 40px;
+    width: 320px;
+    height: 300px;
+  }
+  .pictures{
+    width: 90px;
+    height: 160px;
+  }
 
-}
-.buttonThree{
-	background-color: white;
-	height: 40px;
-}
-.buttonThree a{
-	margin-left: -30px;
-}
-.view{
-	 margin-left: 15px;
+  .product{
+  margin-left: -40px;
+  }
+  .CommentaireId{
+      margin-bottom:220px;
+  }
+  .background{
+    background-image: none;
+  }
+  .livraison{
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  	margin-top: -60px;
 
-}
-.buttontwo{
-	margin-left: 90px;
-}
+  }
+  .buttonThree{
+  	background-color: white;
+  	height: 40px;
+  }
+  .buttonThree a{
+  	margin-left: -30px;
+  }
+  .view{
+  	 margin-left: 15px;
+
+  }
+  .buttontwo{
+  	margin-left: 90px;
+  }
+
 
 }
 @media(max-width: 425px){
   .logo{
       width: 150px;
   }
-  .test{
+  .prixproduit{
 		width: 300px;
 	}
   .picture{
@@ -185,6 +187,4 @@ margin-left: -40px;
 	  height: 200px;
 	  width: 140px;
 	}
-}
-
 }

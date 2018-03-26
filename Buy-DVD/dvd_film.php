@@ -40,7 +40,8 @@ else{
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/moovieseries_tv.css">
-    <link href="https://fonts.googleapis.com/css?family=Bodoni 72" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Bodoni 72" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
@@ -158,14 +159,80 @@ else{
 
 
 </div>
+<style>
+.pictures{
+  width: 90px;
+  height: 160px;
+}
+@media(max-width: 425px){
+	.prixproduit{
+		width: 300px;
+	}
+	.buttontwo{
+		margin-left: 90px;
+	}
+	.viewTwo{
+		margin-top:10px;
+	}
+	.livraison{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: -60px;
 
+	}
+	.prise{
+    margin-left: 40px;
+		height: 295px;
+
+  }
+	.contact{
+		width: 80px;
+	}
+	.pictures{
+	  height: 200px;
+	  width: 140px;
+	}
+
+}
+@media(max-width: 768px){
+.buttonThree{
+	background-color: white;
+	height: 40px;
+}
+.buttonThree a{
+	margin-left: -30px;
+}
+.view{
+	 margin-left: 15px;
+
+}
+.buttontwo{
+	margin-left: 90px;
+}
+.prise{
+  margin-left: 40px;
+  width: 320px;
+	height: 300px;
+}
+.livraison{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -60px;
+
+}
+}
+</style>
 <div class="col-md-5 d-flex flex-column">
 
 <a href="#" class="mt-4 viewTwo bg-dark text-center">Donnez Votre Avis</a>
 
-		<div class="borderOne border border-secondary mt-4">
+		<div class="prise borderOne border border-secondary mt-4">
 
-						<ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+						<ul class="prixproduit nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
 								<li class="nav-item col-6">
 										<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Prix Standart</a>
 								</li>
@@ -180,7 +247,7 @@ else{
 												<div>Prix</div>
 												<div class="prix text-danger"><h4><?php echo $dvdmoovie['prix']; ?></h4></div> <br>
 										</div> <br>
-										<div class="row d-flex justify-content-around"> <br>
+										<div class="livraison row d-flex justify-content-around"> <br>
 												<div class="custom-control custom-checkbox">
 														<input type="checkbox" class="custom-control-input" id="customCheck1">
 														<label class="custom-control-label" for="customCheck1">Livraison Gratuite</label>
@@ -211,7 +278,7 @@ else{
 												<div>Prix</div>
 												<div class="prix text-danger"><h4><?php echo $dvdmoovie['prix2']; ?></h4></div> <br>
 										</div> <br>
-										<div class="row d-flex justify-content-around"> <br>
+										<div class="livraison row d-flex justify-content-around"> <br>
 												<div class="custom-control custom-checkbox">
 														<input type="checkbox" class="custom-control-input" id="customCheck1">
 														<label class="custom-control-label" for="customCheck1">Livraison Gratuite</label>
@@ -257,7 +324,7 @@ else{
 								<div class="card col-md-3">
 										<img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgfilm/imgproduit/<?php echo  $dvdmoovie['imageOne'];?>" alt="Card image cap">
 										<div class="mt-3">
-												<button type="button" class="button btn mt-1 ml-4 col-9">
+												<button type="button" class="buttonThree button btn mt-1 ml-4 col-9">
 
 													<a class="product" href="dvd_film.php?dvdmoovie_id=<?php echo $dvdmoovie['id'] ?>">  Voir le Produit
 													</a>
@@ -268,7 +335,7 @@ else{
 								<div class="card col-md-3">
 										<img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgfilm/imgproduit/<?php echo  $dvdmoovie['imageTwo'];?>" alt="Card image cap">
 										<div class="mt-3">
-												<button type="button" class="button btn mt-1 ml-4 col-9">
+												<button type="button" class="buttonThree button btn mt-1 ml-4 col-9">
 
 													<a class="product" href="dvd_film.php?dvdmoovie_id=<?php echo $dvdmoovie['id'] ?>">   Voir le Produit
 													</a>
@@ -279,7 +346,7 @@ else{
 								<div class="card col-md-3">
 										<img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgfilm/imgproduit/<?php echo  $dvdmoovie ['imageThree'];?>" alt="Card image cap">
 										<div class="mt-3">
-												<button type="button" class="button btn mt-1 ml-4 col-9">
+												<button type="button" class="buttonThree button btn mt-1 ml-4 col-9">
 
 													<a class="product" href="dvd_film.php?dvdmoovie_id=<?php echo $dvdmoovie['id'] ?>">   Voir le Produit
 													</a>
@@ -290,7 +357,7 @@ else{
 								<div class="card col-md-3">
 										<img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgfilm/imgproduit/<?php echo  $dvdmoovie ['imageFoor'];?>" alt="Card image cap">
 										<div class="mt-3">
-												<button type="button" class="button btn mt-1 ml-4 col-9">
+												<button type="button" class="buttonThree button btn mt-1 ml-4 col-9">
 
 													<a class="product" href="dvd_film.php?dvdmoovie_id=<?php echo $dvdmoovie['id'] ?>">   Voir le Produit
 													</a>
@@ -301,7 +368,7 @@ else{
 								<div class="card col-md-3">
 										<img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgfilm/imgproduit/<?php echo  $dvdmoovie ['imageFive'];?>" alt="Card image cap">
 										<div class="mt-3">
-												<button type="button" class="button btn mt-1 ml-4 col-9">
+												<button type="button" class="buttonThree button btn mt-1 ml-4 col-9">
 
 													<a class="product" href="dvd_film.php?dvdmoovie_id=<?php echo $dvdmoovie['id'] ?>">   Voir le Produit
 													</a>

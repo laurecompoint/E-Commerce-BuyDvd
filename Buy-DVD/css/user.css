@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bodoni 72', cursive;
+    background-image: radial-gradient(#D3E0EA, white, #D3E0EA);
+
+}
+.button{
+    background-color: #C4BFFF;
+}
+.block{
+    height: 750px;
+}
+.user{
+    margin-left: 60px
+}
+
+#accordion a{
+    color: black;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}

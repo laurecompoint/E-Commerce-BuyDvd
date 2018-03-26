@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bodoni 72', cursive;
+    background-image: radial-gradient(white, white, #D3E0EA);
+
+}
+.block{
+    height: 550px;
+    margin:auto;
+}
+
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.button{
+    border-radius: 10px;
+    background-color:#C4BFFF;
+
+}
+.degrade{
+  background-image: linear-gradient(#00bce4, #1582D6, #1443D1);
+
+}
+.color{
+  background-image: linear-gradient(white, #D3E0EA, #D3E0EA);
+
+}

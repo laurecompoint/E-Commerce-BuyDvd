@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bodoni 72', cursive;
+    background-image: radial-gradient(white, white, #D3E0EA);
+
+}
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+.picture{
+    height: 200px;
+
+}
+.degrade{
+  background-image: linear-gradient(#D3E0EA, #1582D6, #1443D1);
+  border-color: #1443D1;
+}
+@media(max-width: 425px){
+  .degrade{
+    margin-right: -30px;
+  }
+}

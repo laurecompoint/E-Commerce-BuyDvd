@@ -102,7 +102,7 @@ if(isset($_POST['update'])){
 						}
 				}
 
-				header('location:article-list.php');
+				header('location:categoryserie-list.php');
 				exit;
 		}
 	else{

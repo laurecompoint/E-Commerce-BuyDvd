@@ -76,13 +76,14 @@ if(isset($_POST['register'])){
 }
 
 if(isset($_SESSION['user'])){
+
 	header('location:index.php');
+	$_SESSION['user_id'] = $user['id'];
 	exit;
+
 }
 
 ?>
-
-
 
 
 <!DOCTYPE html>

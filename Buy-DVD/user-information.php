@@ -40,7 +40,7 @@ $users = $query->fetchall();
 	<head>
 		<title>Users Information - Buy DVD !</title>
 		<?php require 'admin/partials/head_assets.php'; ?>
-		<link rel="stylesheet" href="css/moovieseries_tv.css">
+		<link rel="stylesheet" href="css/moovieseriestv.css">
 
 	</head>
 	<body>

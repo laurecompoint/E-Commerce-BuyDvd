@@ -83,7 +83,7 @@
 
         <?php endif; ?>
       <li class="nav-item mt-3 active">
-        <a class="nav-link" href="#">Panier</a>
+        <a class="nav-link" href="panier.php">Panier</a>
       </li>
     </ul>
   </div>

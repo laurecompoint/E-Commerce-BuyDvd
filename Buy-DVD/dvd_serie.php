@@ -1,13 +1,30 @@
 <?php
 
+if (isset($_GET["produit"]))
+{
+  if (!isset($_SESSION["list"]))
+  {
+    $_SESSION["list"] = array();
+  }
+  array_push($_SESSION["list"], $_GET["produit"]);
+}
+//compter elements dans panier
+$panier_count = 0;
+if (isset($_SESSION["list"]))
+{
+  $panier_count = sizeof($_SESSION["list"]);
+}
+?>
+<?php
+
 require_once 'tools/_db.php';
 
 if(isset($_POST['save'])){
 		$query = $db->prepare('INSERT INTO commentaire (speudo,objet,avis,is_published,created_at) VALUES (?, ?, ?, ?,NOW())');
 		$newCommentaire = $query->execute(
 		[
-			$_POST['objet'],
 			$_POST['speudo'],
+            $_POST['objet'],
 			$_POST['avis'],
 			$_POST['is_published']
 
@@ -83,20 +100,10 @@ else{
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
-    <meta hhtp-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/moovieseries_tv.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Bodoni 72" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <title>Buy DVD - Serie</title>
+    <?php require 'partials/head_assets.php'; ?>
+    <title>Buy DVD - Série TV</title>
 </head>
+
 <body>
 
   <head>
@@ -122,7 +129,9 @@ else{
 
 <div class="col-md-5 mt-5">
       <div class="picture">
+        <a class="col-4 my-3" data-fancybox="gallery" href="img/imgserie/imgproduit/<?php echo $dvd_serie['image']; ?>">
           <img src="img/imgserie/imgproduit/<?php echo $dvd_serie ['image'];?>" class="picture"/>
+        </a>
       </div>
 
 			<nav>
@@ -217,76 +226,9 @@ else{
 <a href="#avis" class="viewTwo text-center">Donnez Votre Avis</a>
 
 
-<style>
-.pictures{
-  width: 90px;
-  height: 160px;
-}
-@media(max-width: 425px){
-	.prixproduit{
-		width: 300px;
-	}
-	.buttontwo{
-		margin-left: 90px;
-	}
-	.viewTwo{
-		margin-top:10px;
-	}
-	.livraison{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin-top: -60px;
-
-	}
-	.prise{
-    margin-left: 40px;
-		height: 295px;
-
-  }
-	.contact{
-		width: 80px;
-	}
-	.pictures{
-	  height: 200px;
-	  width: 140px;
-	}
-
-}
-@media(max-width: 768px){
-.buttonThree{
-	background-color: white;
-	height: 40px;
-}
-.buttonThree a{
-	margin-left: -30px;
-}
-.view{
-	 margin-left: 15px;
-
-}
-.buttontwo{
-	margin-left: 90px;
-}
-.prise{
-  margin-left: 40px;
-  width: 320px;
-	height: 300px;
-}
-.livraison{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-top: -60px;
-
-}
-}
-</style>
 		<div class="prise borderOne border border-secondary mt-4">
 
-            <ul class="prixproduit nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+            <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item col-6">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Prix Standart</a>
                 </li>
@@ -313,13 +255,12 @@ else{
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-1">
-											<form method="POST" action="cart.php">
-											<button class="buttontwo">
-                       <a href="">Ajouter au panier </a>
-											</button>
-										</form>
+                        <form method="POST" action="panier.php">
+                            <button class="buttontwo" name="produit">
+                               <a href="panier.php" name="produit">Ajouter au panier </a>
+                            </button>
+                        </form>
                     <a href="#" class="bg-light pb-3 text-center mt-3">
-
                         Voir toutes les options et délais de livraison
                     </a>
                     </div>
@@ -372,7 +313,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie['imageOne'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
+                            <button type="button" class="buttonThree  btn mt-1 ml-4 col-md-9">
 
                                 <a href="#">  Voir le Produit
                                 </a>
@@ -383,7 +324,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie ['imageTwo'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
+                            <button type="button" class="buttonThree  btn mt-1 ml-4 col-md-9">
 
                                 <a href="#"> Voir le Produit
                                 </a>
@@ -394,7 +335,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie ['imageThree'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
+                            <button type="button" class="buttonThree  btn mt-1 ml-4 col-md-9">
 
                                 <a href="#">  Voir le Produit
                                 </a>
@@ -405,7 +346,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie ['imageFoor'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
+                            <button type="button" class="buttonThree btn mt-1 ml-4 col-md-9">
 
                                 <a href="#"> Voir le Produit
                                 </a>
@@ -416,7 +357,7 @@ else{
                     <div class="card col-md-3">
                         <img class="card-img-top pictures rounded mx-auto d-block mt-5" src="img/imgserie/imgProduitSimilaire/<?php echo $dvd_serie ['imageFive'];?>" alt="Card image cap">
                         <div class="mt-3">
-                            <button type="button" class="buttonThree button btn mt-1 ml-4 col-md-9">
+                            <button type="button" class="buttonThree btn mt-1 ml-4 col-md-9">
 
                                 <a href="">  Voir le Produit
                                 </a>
@@ -466,7 +407,7 @@ Pas encore de commentaire pour ce produit
 	</div>
 
 
-	<div class="Commentaireid col-md-3 d-flex justify-content-end">
+	<div class="col-md-3 d-flex justify-content-end">
 
 
 	 <form class="d-flex flex-column m-auto align-items-center" action="dvd_serie.php?dvd_serie_id=<?php echo $dvd_serie['id'];?>" method="post">

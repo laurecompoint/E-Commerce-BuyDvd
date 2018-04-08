@@ -21,7 +21,6 @@ if(isset($_POST['update'])){
 
 	$emailAlreadyExists = $query->fetch();
 
-
 	if($emailAlreadyExists && $emailAlreadyExists['email'] != $user['email']){
 		$updateMessage = "Adresse email déjà utilisée";
 	}

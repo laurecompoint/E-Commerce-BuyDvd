@@ -67,13 +67,13 @@ if(isset($_POST['update'])){
 	);
 
 
-	$result = $query->execute(
+	$resultCategory = $query->execute(
 		[
 			'name' => $_POST['name'],
 			'id' => $_POST['id']
 		]
 	);
-	if($newCategorySerie){
+	if($resultCategory){
 				if(isset($_FILES['image'])){
 
 						$allowed_extensions = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
@@ -81,7 +81,7 @@ if(isset($_POST['update'])){
 
 						if ( in_array($my_file_extension , $allowed_extensions) ){
 
-
+	     if(isset($_POST['current-image'])){
 					unlink('../img/imgserie/imgcategory/' . $_POST['current-image']);
 				}
 
@@ -109,7 +109,7 @@ if(isset($_POST['update'])){
 		$message = 'Erreur.';
 	}
 	}
-
+if(isset($_GET['categoryserie_id']) && isset($_GET['action']) && $_GET['action'] == 'edit'){
 	$query = $db->prepare('SELECT * FROM categoryserie WHERE id = ?');
     $query->execute(array($_GET['categoryserie_id']));
 

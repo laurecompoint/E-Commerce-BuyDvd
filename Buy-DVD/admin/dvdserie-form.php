@@ -201,6 +201,11 @@ if(isset($_GET['dvd_serie_id']) && isset($_GET['action']) && $_GET['action'] == 
     $query->execute(array($_GET['dvd_serie_id']));
 
 	$dvdserie = $query->fetch();
+
+	$query = $db->prepare('SELECT categoryserie_id FROM dvdserie_category WHERE dvd_serie_id = ?');
+	$query->execute(array($_GET['dvd_serie_id']));
+
+	$dvdCategories = $query->fetchAll();
 }
 ?>
 
@@ -260,12 +265,21 @@ if(isset($_GET['dvd_serie_id']) && isset($_GET['action']) && $_GET['action'] == 
 							<select class="form-control" name="categories[]" id="categories" multiple>
 								<?php
 								$queryCategory= $db ->query('SELECT * FROM categoryserie');
-								while($category = $queryCategory->fetch()):
-								  ?>
-									<option value="<?php echo $category['id']; ?>" > <?php echo $category['name']; ?> </option>
+								$categories = $queryCategory->fetchAll();
+								?>
+								<?php foreach($categories as $key => $category) : ?>
 
-								<?php endwhile; ?>
+									<?php
+									$selected = '';
 
+									foreach ($dvdCategories as $dvdCategorie) {
+										if($category['id'] == $dvdCategorie['categoryserie_id']){
+											$selected = 'selected="selected"';
+										}
+									}
+									?>
+									<option value="<?php echo $category['id']; ?>" <?php echo $selected; ?>> <?php echo $category['name']; ?> </option>
+								<?php endforeach; ?>
 							</select>
 						</div>
 

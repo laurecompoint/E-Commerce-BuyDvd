@@ -15,13 +15,12 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .button{
     border-radius: 10px;
     background-color:#C4BFFF;
-
 }
 .degrade{
   background-image: linear-gradient(#00bce4, #1582D6, #1443D1);

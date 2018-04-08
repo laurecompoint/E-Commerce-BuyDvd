@@ -7,12 +7,12 @@ if(!isset($_SESSION['is_admin']) OR $_SESSION['is_admin'] == 0){
 	exit;
 }
 
-if(isset($_GET['categoryfilm_id']) && isset($_GET['action']) && $_GET['action'] == 'delete'){
+if(isset($_GET['categorymoovie_id']) && isset($_GET['action']) && $_GET['action'] == 'delete'){
 
-	$query = $db->prepare('DELETE FROM categoryfilm WHERE id = ?');
+	$query = $db->prepare('DELETE FROM categorymoovie WHERE id = ?');
 	$result = $query->execute(
 		[
-			$_GET['categoryfilm_id']
+			$_GET['categorymoovie_id']
 		]
 	);
 
@@ -70,12 +70,12 @@ $categoriesfilm = $query->fetchall();
 							<?php foreach($categoriesfilm as $category): ?>
 
 							<tr>
-								
+
 								<th><?php echo htmlentities($category['id']); ?></th>
 								<td><?php echo htmlentities($category['name']); ?></td>
 								<td class="d-flex justify-content-end">
-									<a href="categoryserie-form.php?categoryserie_id=<?php echo $category['id']; ?>&action=edit" class="btn button mr-1">Modifier</a>
-									<a onclick="return confirm('Are you sure?')" href="categoryserie-list.php?categoryserie_id=<?php echo $category['id']; ?>&action=delete" class="btn btn-danger">Supprimer</a>
+									<a href="categoryfilm-form.php?categorymoovie_id=<?php echo $category['id']; ?>&action=edit" class="btn button mr-1">Modifier</a>
+									<a onclick="return confirm('Are you sure?')" href="categoryfilm-list.php?categorymoovie_id=<?php echo $category['id']; ?>&action=delete" class="btn btn-danger">Supprimer</a>
 								</td>
 							</tr>
 

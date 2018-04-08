@@ -18,7 +18,7 @@ if(!isset($_SESSION['is_admin']) OR $_SESSION['is_admin'] == 0){
 		<?php require 'partials/head_assets.php'; ?>
 
 	</head>
-	<body class="index-body" style="background-image: url(cine2.jpg); background-attachment: fixed;background-repeat: no-repeat;background-position: center center;">
+	<body class="index-body" style="background-image: url(../img/cine2.jpg); background-attachment: fixed;background-repeat: no-repeat;background-position: center center;">
 		<div class="container-fluid">
 			<?php require 'partials/header.php'; ?>
 			<div class="row my-3 index-content" >

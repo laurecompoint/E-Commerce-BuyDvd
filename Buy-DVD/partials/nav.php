@@ -1,49 +1,8 @@
 
-
-<style>
-.navmarge{
-display: flex;
-justify-content: flex-end;
-}
-.logo{
-  height: 50px;
-}
-
-.linkTwo a:hover{
-    background-color: white;
-    border-radius: 1px;
-}
-.menu{
-  margin-left: -40px;
-}
-.menu a:hover{
-  background-color: white;
-}
-.button{
-    background-color:#C4BFFF;
-}
-.nav a:hover{
-  background-color:white;
-
-}
-@media(max-width: 425px){
-  .logo{
-      width: 150px;
-  }
-  .nav{
-    width: 450px;
-  }
-
-}
-@media(max-width: 768px){
-
-}
-
-</style>
-
+<link rel="stylesheet" href="css/nav.css">
 
 <nav class="nav navbar navbar-expand-lg navbar-light bg-white col-12">
-   <img src="img/logo.png" alt="logo" class="logo col-md-2" />
+   <img src="img/logo.png" alt="logo" class="img-fluid logo col-md-2" />
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -89,12 +48,28 @@ justify-content: flex-end;
         </div>
       </li>
       <li class="nav-item active dropdown">
-          <?php if(isset($_SESSION['user'])): ?>
-        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="img/contacte.png" alt="contacte" style="height:50px;"/>
-        </a>
+          <?php if(isset($_SESSION['user'])) : ?>
+
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+
+          <?php
+
+          $query = $db->prepare('SELECT * FROM user WHERE id = ?');
+          $query->execute(array($_SESSION['user_id']));
+          $user = $query->fetch();
+
+          ?>
+
+          <?php if(!empty($user['image'])): ?>
+            <img src="img/imguser/<?php echo $user['image'];?>" alt="contacte" style="height:50px;width:50px;" class="image img-fluid"/>
+          <?php else : ?>
+            <img src="img/contacte.png" alt="contacte" style="height:50px;"/>
+          <?php endif; ?>
+
+          </a>
         <div class="dropdown-menu menu button" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="user-profile.php">User Information</a> <br>
+          <a class="dropdown-item" href="user-information.php">User Information</a> <br>
 
           <p><a class="m-auto d-block btn degrade col-8 text-center text-white" href="index.php?logout">Déconnexion</a></p>
 

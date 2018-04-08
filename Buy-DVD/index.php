@@ -1,7 +1,5 @@
 <?php require_once 'tools/_db.php';
 
-
-
 if(isset($_GET['logout']) && isset($_SESSION['user'])){
 
 
@@ -10,7 +8,9 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
 	unset($_SESSION["is_admin"]);
 	unset($_SESSION["user_id"]);
 
+
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +25,6 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
    <link rel="stylesheet" href="css/style.css">
    <link href="https://fonts.googleapis.com/css?family=Bodoni 72" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
 	 <title>Buy DVD</title>
 
@@ -58,7 +55,7 @@ if(isset($_GET['logout']) && isset($_SESSION['user'])){
     <div class="container card-columns">
 
         <div class="degrade card">
-            <a href="dvd_film.php?dvdmoovie_id=1"> <img id="devant" class="picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/comedie1.jpg" alt="Card image cap">
+            <a href="dvd_film.php?dvdmoovie_id=1"> <img id="devant" class="img-fluid picture col-7 card-img-top rounded mx-auto d-block mt-5" src="img/imgfilm/comedie1.jpg" alt="Card image cap">
 
 
             </a>

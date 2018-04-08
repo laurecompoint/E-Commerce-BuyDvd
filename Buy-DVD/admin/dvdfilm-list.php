@@ -9,6 +9,21 @@ if(!isset($_SESSION['is_admin']) OR $_SESSION['is_admin'] == 0){
 
 if(isset($_GET['dvd_moovie_id']) && isset($_GET['action']) && $_GET['action'] == 'delete'){
 
+	$query = $db->prepare('SELECT image FROM dvdmoovie WHERE id = ?');
+	$query->execute(array($_GET['dvdmoovie_id']));
+	$imageToDelete = $query->fetch();
+
+	if($imageToDelete){ //si différent de NULL
+		unlink('../img/imgfilm/imgproduit/' . $imageToDelete["image"]);
+	}
+
+	$query = $db->prepare('DELETE FROM dvdmoovie_categorymoovie WHERE dvdmoovie_id = ?');
+	$result = $query->execute(
+		[
+			$_GET['dvdmoovie_id']
+		]
+	);
+
 	$query = $db->prepare('DELETE FROM dvdmoovie WHERE id = ?');
 	$result = $query->execute(
 		[

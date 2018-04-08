@@ -10,6 +10,23 @@ if(!isset($_SESSION['is_admin']) OR $_SESSION['is_admin'] == 0){
 
 if(isset($_GET['dvd_serie_id']) && isset($_GET['action']) && $_GET['action'] == 'delete'){
 
+
+	$query = $db->prepare('SELECT image FROM dvd_serie WHERE id = ?');
+	$query->execute(array($_GET['dvd_serie_id']));
+	$imageToDelete = $query->fetch();
+
+	if($imageToDelete){ //si différent de NULL
+		unlink('../img/imgserie/imgproduit/' . $imageToDelete["image"]);
+	}
+
+	$query = $db->prepare('DELETE FROM dvdserie_categoryserie WHERE dvd_serie_id = ?');
+	$result = $query->execute(
+		[
+			$_GET['dvd_serie_id']
+		]
+	);
+
+
 	$query = $db->prepare('DELETE FROM dvd_serie WHERE id = ?');
 	$result = $query->execute(
 		[

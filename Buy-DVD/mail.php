@@ -23,3 +23,28 @@ else {
 
 
 ?>
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Administration - Buy DVD !</title>
+
+		<?php require 'partials/head_assets.php'; ?>
+
+	</head>
+	<body class="index-body" style="background-image: url(img/cine2.jpg); background-attachment: fixed;background-repeat: no-repeat;background-position: center center;">
+		<div class="container-fluid">
+
+			<div class="row my-3 index-content" >
+
+
+				<main class="col-12 d-flex justify-content-center">
+
+          Votre mail à bien été envoyé !!
+
+				</main>
+			</div>
+
+		</div>
+	</body>
+</html>

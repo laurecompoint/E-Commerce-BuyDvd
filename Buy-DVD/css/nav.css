@@ -1,26 +1,37 @@
-
-
-a{
-    color: white;
+.navmarge{
+display: flex;
+justify-content: flex-end;
 }
-a:hover{
-    text-decoration: none;
-    color: white;
+.logo{
+  height: 50px;
 }
-.picture{
-    height: 200px;
 
+.linkTwo a:hover{
+    background-color: white;
+    border-radius: 1px;
 }
-.nav{
+.menu{
+  margin-left: -40px;
+}
+.menu a:hover{
   background-color: white;
 }
+.button{
+    background-color:#C4BFFF;
+}
+.nav a:hover{
+  background-color:white;
 
-@media(max-width: 770px){
-  .picture{
-      height: 100px;
-
-  }
+}
+.image{
+	border-radius: 50%;
 }
 @media(max-width: 425px){
+  .logo{
+      width: 150px;
+  }
+  .nav{
+    width: 450px;
+  }
 
 }

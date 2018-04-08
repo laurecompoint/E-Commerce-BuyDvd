@@ -7,7 +7,7 @@ if(!isset($_SESSION['is_admin']) OR $_SESSION['is_admin'] == 0){
 }
 
 if(isset($_POST['save'])){
-    $query = $db->prepare('INSERT INTO categoryfilm (name) VALUES (?)');
+    $query = $db->prepare('INSERT INTO categorymoovie (name) VALUES (?)');
     $newCategoryFilm = $query->execute(
 		[
 			$_POST['name'],
@@ -28,14 +28,14 @@ if(isset($_POST['save'])){
 
 			 $new_file_name = md5(rand());
 
-			 $destination = '../img/imgfilm/imgcategory/' . $new_file_name . '.' . $my_file_extension;
+			 $destination = '../img/imgserie/imgcategory/' . $new_file_name . '.' . $my_file_extension;
 
 			 $result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
 
 			 $lastInsertarticleId = (int) $db->lastInsertId();
 
 
-				 $query = $db->prepare('UPDATE categoryserie SET
+				 $query = $db->prepare('UPDATE categorymoovie SET
 					 image = :image
 					 WHERE id = :id'
 				 );
@@ -61,19 +61,19 @@ if(isset($_POST['save'])){
 
 if(isset($_POST['update'])){
 
-	$query = $db->prepare('UPDATE categoryserie SET
+	$query = $db->prepare('UPDATE categorymoovie SET
 		name = :name
 		WHERE id = :id'
 	);
 
-	$result = $query->execute(
+	$resultFilm = $query->execute(
 		[
 			'name' => $_POST['name'],
 			'id' => $_POST['id']
 		]
 	);
 
-	if($newCategoryFilm){
+	if($resultFilm){
 				if(isset($_FILES['image'])){
 
 						$allowed_extensions = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
@@ -83,14 +83,14 @@ if(isset($_POST['update'])){
 
 
 				if(isset($_POST['current-image'])){
-					unlink('../img/imgfilm/imgcategory/' . $_POST['current-image']);
+					unlink('../img/imgserie/imgcategory/' . $_POST['current-image']);
 				}
 
 								$new_file_name = md5(rand());
-								$destination = '../img/imgfilm/imgcategory/' . $new_file_name . '.' . $my_file_extension;
+								$destination = '../img/imgserie/imgcategory/' . $new_file_name . '.' . $my_file_extension;
 								$result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
 
-								$query = $db->prepare('UPDATE categorieserie SET
+								$query = $db->prepare('UPDATE categorymoovie SET
 								image = :image
 								WHERE id = :id'
 								);
@@ -111,10 +111,10 @@ if(isset($_POST['update'])){
 	}
 }
 
-if(isset($_GET['categoryfilm_id']) && isset($_GET['action']) && $_GET['action'] == 'edit'){
+if(isset($_GET['categorymoovie_id']) && isset($_GET['action']) && $_GET['action'] == 'edit'){
 
-	$query = $db->prepare('SELECT * FROM categoryserie WHERE id = ?');
-    $query->execute(array($_GET['categoryserie_id']));
+	$query = $db->prepare('SELECT * FROM categorymoovie WHERE id = ?');
+    $query->execute(array($_GET['categorymoovie_id']));
 
 	$categoryfilm = $query->fetch();
 }
@@ -175,7 +175,7 @@ if(isset($_GET['categoryfilm_id']) && isset($_GET['action']) && $_GET['action'] 
 							<?php endif; ?>
 						</div>
 
-						
+
 						<?php if(isset($categoryfilm)): ?>
 						<input type="hidden" name="id" value="<?php echo $categoryfilm['id']?>" />
 						<?php endif; ?>

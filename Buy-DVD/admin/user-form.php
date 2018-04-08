@@ -13,16 +13,50 @@ if(isset($_POST['save'])){
 		[
 			$_POST['firstname'],
 			$_POST['lastname'],
-			$_POST['password'],
+			  hash('md5', $_POST['password']),
 			$_POST['email'],
 			$_POST['is_admin'],
 		]
     );
 
-	if($newUser){
-		header('location:user-list.php');
-		exit;
-    }
+		if($newUser){
+
+	   if(isset($_FILES['image'])){
+
+			 $allowed_extensions = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
+
+			 $my_file_extension = pathinfo( $_FILES['image']['name'] , PATHINFO_EXTENSION);
+
+
+			 if ( in_array($my_file_extension , $allowed_extensions) ){
+
+				 $new_file_name = md5(rand());
+
+				 $destination = '../img/imguser/' . $new_file_name . '.' . $my_file_extension;
+
+				 $result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
+
+				 $lastInsertarticleId = (int) $db->lastInsertId();
+
+
+					 $query = $db->prepare('UPDATE user SET
+						 image = :image
+						 WHERE id = :id'
+					 );
+
+					 $resultUpdateImage = $query->execute(
+			       [
+			         'image' =>$new_file_name . '.' . $my_file_extension,
+			         'id' => $lastInsertarticleId
+			   		]
+			     );
+
+			 }
+		 }
+
+			header('location:user-list.php');
+			exit;
+	    }
 	else{
 		$message = "Impossible d'enregistrer le nouvel utilisateur...";
 	}
@@ -40,7 +74,7 @@ if(isset($_POST['update'])){
 	);
 
 
-	$result = $query->execute(
+	$resultUser = $query->execute(
 		[
 			'firstname' => $_POST['firstname'],
 			'lastname' => $_POST['lastname'],
@@ -51,7 +85,35 @@ if(isset($_POST['update'])){
 		]
 	);
 
-	if($result){
+	if($resultUser){
+				if(isset($_FILES['image'])){
+
+						$allowed_extensions = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
+						$my_file_extension = pathinfo( $_FILES['image']['name'] , PATHINFO_EXTENSION);
+
+						if ( in_array($my_file_extension , $allowed_extensions) ){
+
+         if(isset($_POST['current-image'])){
+					unlink('../img/imguser/' . $_POST['current-image']);
+				}
+
+								$new_file_name = md5(rand());
+								$destination = '../img/imguser/' . $new_file_name . '.' . $my_file_extension;
+								$result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
+
+								$query = $db->prepare('UPDATE user SET
+					      image = :image
+					      WHERE id = :id'
+								);
+								$resultUpdateImage = $query->execute(
+										[
+												'image' => $new_file_name . '.' . $my_file_extension,
+												'id' => $_POST['id']
+										]
+								);
+						}
+				}
+
 		header('location:user-list.php');
 		exit;
 	}
@@ -103,6 +165,7 @@ if(isset($_GET['user_id']) && isset($_GET['action']) && $_GET['action'] == 'edit
 
 
 					<form action="user-form.php" method="post">
+
 						<div class="form-group">
 							<label for="firstname">Prénom :</label>
 							<input class="form-control" <?php if(isset($user)): ?>value="<?php echo $user['firstname']?>"<?php endif; ?> type="text" placeholder="Prénom" name="firstname" id="firstname" />
@@ -111,6 +174,16 @@ if(isset($_GET['user_id']) && isset($_GET['action']) && $_GET['action'] == 'edit
 							<label for="lastname">Nom de famille : </label>
 							<input class="form-control" <?php if(isset($user)): ?>value="<?php echo $user['lastname']?>"<?php endif; ?> type="text" placeholder="Nom de famille" name="lastname" id="lastname" />
 						</div>
+
+						<div class="form-group">
+							<label for="image">Image :</label>
+							<input class="form-control" type="file" name="image" id="image" />
+							<?php if(isset($user) && $user['image']): ?>
+							<img class="col-5 img-fluid py-4" src="../img/imguser/<?php echo $user['image']; ?>" alt="" />
+							<input type="hidden" name="current-image" value="<?php echo $user['image']; ?>" />
+							<?php endif; ?>
+						</div>
+
 						<div class="form-group">
 							<label for="email">Email :</label>
 							<input class="form-control" <?php if(isset($user)): ?>value="<?php echo $user['email']?>"<?php endif; ?> type="email" placeholder="Email" name="email" id="email" />

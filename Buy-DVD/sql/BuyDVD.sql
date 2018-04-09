@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  lun. 09 avr. 2018 à 19:46
+-- Généré le :  lun. 09 avr. 2018 à 21:04
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -182,8 +182,7 @@ INSERT INTO `dvdmoovie` (`id`, `is_published`, `created_at`, `title`, `image`, `
 (13, 1, '0000-00-00', 'Harry Potter ', 'harrypotter.png', 'Le pouvoir de Voldemort s\'étend. Celui-ci contrôle maintenant le Ministère de la Magie et Poudlard. Harry, Ron et Hermione décident de terminer le travail commencé par Dumbledore, et de retrouver les derniers Horcruxes pour vaincre le Seigneur des Ténèbres. Mais il reste bien peu d\'espoir aux trois sorciers, qui doivent réussir à tout prix.', '14€99', '', 'David Yates', 'Daniel Radcliffe <br>\r\nEmma Watson <br>\r\nRupert Grint <br>\r\nBonnie Wright <br>\r\nAlan Rickman <br>\r\nHelena Bonham Carter <br>\r\nRalph Fiennes <br>\r\nBill Nighy', 'Français/Anglais', 'Dvd du film', 'dvd zone 2', '', 'Tous public', 'color', 'stereo', 'pal', 'chasseurdesorcier.png', 'ironman.png', 'starwar.png', 'overdrive.png', 'thor.png'),
 (14, 1, '2016-03-02', 'Le Dernier chasseur de sorcières', 'chasseurdesorcier.png', 'Notre monde actuel repose sur un pacte fragile régissant la paix entre humains et sorcières. Ces dernières sont autorisées à vivre secrètement parmi nous tant qu’elles n’ont pas recours à la magie noire. Kaulder, membre de la confrérie de la hache et de la croix qui garantit ce pacte, chasse les sorcières insoumises depuis plus de 800 ans. Mais lorsque l’un des membres de son groupe est assassiné, la guerre est sur le point d’éclater et de faire des rues de New York un véritable champ de bataille.', '10€', '4€09', 'Breck Eisner', 'Diesel <br>\r\nVin Diesel <br>\r\nLeslie <br>\r\nRose Leslie <br>\r\nWood <br>\r\nElijah Wood <br>\r\nOlafur Darri Olafsson <br>\r\nJoseph Gilgun <br>\r\nRena Owen <br>\r\nJulie Engelbrecht <br>\r\nMichael Caine', 'Français/Anglais', 'Dvd du film', 'DVD zone 2', 'M6 Vidéo', 'Tous public', 'color', 'stereo', 'pal', 'overdrive.png', 'harrypotter.png', 'thor.png', 'ironman.png', 'starwar.png'),
 (15, 1, '2017-09-21', 'Chasseur de monstres', 'monstre.png', 'Les hommes et les monstres vivaient ensemble en paix jusqu\'au jour où ils se font chasser par les hommes. Lors d\'une guerre civile, les monstres n\'auront pour choix que de se réfugier chez les hommes... Pourraient-ils cohabiter à nouveau?\r\n', '17€', '4€49', 'Raman Hui\r\n', 'Boran Jing <br>\r\nWu Jiang <br>\r\nBaihe Bai\r\n', 'Français/Anglais', 'Dvd du film', 'DVD Zone 2', 'Factoris Films', 'Tous public', 'color', 'stereo', 'pal', 'dragon.png', 'monstre.png', 'annime.png', 'annime1.png', 'thor.png'),
-(16, 1, '2014-11-05', 'Dragons 2', 'dragon.png', 'Tandis qu’Astrid, Rustik et le reste de la bande se défient durant des courses sportives de dragons devenues populaires sur l’île, notre duo désormais inséparable parcourt les cieux, à la découverte de territoires inconnus et de nouveaux mondes. Au cours de l’une de leurs aventures, ils découvrent une grotte secrète qui abrite des centaines de dragons sauvages, dont le mystérieux Dragon Rider. Les deux amis se retrouvent alors au centre d’une lutte visant à maintenir la paix. Harold et Krokmou vont se battre pour défendre leurs valeurs et préserver le destin des hommes et des dragons.', '10€', '0€90', 'Dean DeBlois <br>\r\nChris Sanders', 'Jay Baruchel <br>\r\nCate Blanchett <br>\r\nGerard Butler <br>\r\nCraig Ferguson', 'Français/Anglais', 'Dvd du film', 'DVD zone 2', 'Dream Catcher', 'Tous public', 'color', 'stereo', 'pal', 'monstre.png', 'dragon.png', 'annime.png', 'ironman.png', 'thor.png'),
-(17, 1, '0000-00-00', 'Peter et Elliott le dragon', 'annime.png', 'Depuis de longues années, M. Meacham, un vieux sculpteur sur bois, régale les enfants du coin avec ses histoires sur un féroce dragon qui vivrait au plus profond de la forêt voisine. Pour sa fille Grace, garde forestière de son état, tout ceci n’est que contes à dormir debout… jusqu’au jour où elle fait connaissance avec Peter. Ce mystérieux petit garçon de 10 ans - qui dit n’avoir ni famille ni foyer - assure qu’il vit dans les bois avec un dragon géant baptisé Elliott. Et la description qu’il en fait correspond étonnamment à celui dont parle son père… Avec l’aide de la jeune Natalie - la fille de Jack, le propriétaire de la scierie -, Grace va tout mettre en oeuvre pour découvrir qui est vraiment Peter, d’où il vient, et percer le secret de son incroyable histoire…', '10€', '6€64', 'David Lowery', 'Bryce Dallas Howard <br>\r\nRobert Redford <br>\r\nOakes Fegley <br>\r\nOona Laurence <br>\r\nWes Bentley <br>\r\nKarl Urban <br>\r\nIsiah Jr. Whitlock <br>\r\nEsmée Myers', 'Français/Anglais', 'Dvd du film', 'DVD zone 2', 'Walt Disney Records', 'Tous public', 'color', 'stereo', 'pal', 'monstre.png', 'dragon.png', 'annime.png', 'thor.png', 'starwar.png');
+(16, 1, '2014-11-05', 'Dragons 2', 'dragon.png', 'Tandis qu’Astrid, Rustik et le reste de la bande se défient durant des courses sportives de dragons devenues populaires sur l’île, notre duo désormais inséparable parcourt les cieux, à la découverte de territoires inconnus et de nouveaux mondes. Au cours de l’une de leurs aventures, ils découvrent une grotte secrète qui abrite des centaines de dragons sauvages, dont le mystérieux Dragon Rider. Les deux amis se retrouvent alors au centre d’une lutte visant à maintenir la paix. Harold et Krokmou vont se battre pour défendre leurs valeurs et préserver le destin des hommes et des dragons.', '10€', '0€90', 'Dean DeBlois <br>\r\nChris Sanders', 'Jay Baruchel <br>\r\nCate Blanchett <br>\r\nGerard Butler <br>\r\nCraig Ferguson', 'Français/Anglais', 'Dvd du film', 'DVD zone 2', 'Dream Catcher', 'Tous public', 'color', 'stereo', 'pal', 'monstre.png', 'dragon.png', 'annime.png', 'ironman.png', 'thor.png');
 
 -- --------------------------------------------------------
 
@@ -216,7 +215,6 @@ INSERT INTO `dvdmoovie_category` (`id`, `dvdmoovie_id`, `categorymoovie_id`) VAL
 (13, 14, 5),
 (14, 15, 6),
 (15, 16, 6),
-(16, 17, 6),
 (17, 14, 4),
 (18, 11, 5),
 (19, 13, 4),
@@ -342,8 +340,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `image`, `is_admin`, `lastname`, `firstname`, `email`, `password`) VALUES
-(41, 'user.jpg', 1, 'Admin', 'Laure', 'Admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3'),
-(42, 'paysage.jpg', 0, 'PasAdmin', 'User', 'PasAdmin@gmail.com', 'ae4e268a31b839566f62b259fb3fd9bc');
+(42, 'paysage.jpg', 0, 'PasAdmin', 'User', 'PasAdmin@gmail.com', 'ae4e268a31b839566f62b259fb3fd9bc'),
+(44, 'user.jpg', 1, 'Admin', 'Laure', 'Admin@gmail.com', 'f8de41bb0edd8b0bfc2caec9074c39f0');
 
 --
 -- Index pour les tables déchargées
@@ -416,7 +414,7 @@ ALTER TABLE `categorymoovie`
 -- AUTO_INCREMENT pour la table `categoryserie`
 --
 ALTER TABLE `categoryserie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `commentaire`
 --
@@ -431,27 +429,27 @@ ALTER TABLE `commentaire_produitserie`
 -- AUTO_INCREMENT pour la table `dvdmoovie`
 --
 ALTER TABLE `dvdmoovie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT pour la table `dvdmoovie_category`
 --
 ALTER TABLE `dvdmoovie_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT pour la table `dvdserie_category`
 --
 ALTER TABLE `dvdserie_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT pour la table `dvd_serie`
 --
 ALTER TABLE `dvd_serie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

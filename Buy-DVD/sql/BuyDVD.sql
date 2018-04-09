@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  lun. 26 mars 2018 à 17:12
+-- Généré le :  lun. 09 avr. 2018 à 10:24
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -63,7 +63,7 @@ CREATE TABLE `categoryserie` (
 INSERT INTO `categoryserie` (`id`, `name`, `image`) VALUES
 (1, 'Comédie', 'bannierecommedie.jpg'),
 (2, 'Romance', 'romancebanniere.jpg'),
-(3, 'Policier/Drama', 'bannierepolice.jpg'),
+(3, 'Policier/Dramas', 'bannierepolice.jpg'),
 (4, 'Action/Aventure', 'banniereaction.png'),
 (5, 'Fantastique', 'bannierefantastique.png'),
 (6, 'Dessin Animé', 'bannieredisney.jpg');
@@ -100,7 +100,7 @@ INSERT INTO `commentaire` (`id`, `speudo`, `objet`, `avis`, `created_at`, `is_pu
 (10, 'JDKSGN', 'histoire genial', 'je suis satisfait de mon achat', '2018-03-11', 1),
 (22, 'Sonia', 'Top, Génial', 'Série top. Hâte que la saison 2 débarque en DVD afin de savoir ce qu\'il va arriver à Barry Allen', '2018-03-22', 1),
 (29, 'Jodemetz', 'Etonnant', 'Je connais l\'ancienne série de Flash et j\'ai toujours un peu peur de ce que cela va donner. Mai je suis agréablement surprise et reprendre l\'ancien acteur de la 1ère série comme père du nouveau Flash !!! Chapeau !!!!!!! J\'adore.', '2018-03-22', 1),
-(30, 'Epoustouflant', 'sabrina1766', 'Une série époustouflante! Tout est réuni : suspense, humour, amitié... Vivement la saison 2', '2018-03-22', 1);
+(30, 'sabrina176', 'Epoustouflant', 'Une série époustouflante! Tout est réuni : suspense, humour, amitié... Vivement la saison 2', '2018-03-22', 1);
 
 -- --------------------------------------------------------
 
@@ -130,7 +130,8 @@ INSERT INTO `commentaire_produitserie` (`id`, `commentaire_id`, `dvd_serie_id`) 
 (9, 9, 6),
 (14, 29, 11),
 (15, 22, 11),
-(16, 30, 6);
+(16, 30, 6),
+(18, 32, 10);
 
 -- --------------------------------------------------------
 
@@ -169,7 +170,7 @@ CREATE TABLE `dvdmoovie` (
 --
 
 INSERT INTO `dvdmoovie` (`id`, `is_published`, `created_at`, `title`, `image`, `summary`, `prix`, `prix2`, `realisateur`, `acteur`, `language_subtitle`, `content`, `format`, `editeur`, `public`, `type_color`, `stereo`, `qualite`, `imageOne`, `imageTwo`, `imageThree`, `imageFoor`, `imageFive`) VALUES
-(1, 1, '2018-09-24', 'Qu\'est-ce qu\'on a fait au bon Dieu ?', 'annime1.png', 'Claude et Marie Verneuil, issus de la grande bourgeoisie catholique provinciale sont des parents plutôt \"vieille France\". Mais ils se sont toujours obligés à faire preuve d\'ouverture d\'esprit...Les pilules furent cependant bien difficiles à avaler quand leur première fille épousa un musulman, leur seconde un juif et leur troisième un chinois. Leurs espoirs de voir enfin l\'une d\'elles se marier à l\'église se cristallisent donc sur la cadette, qui, alléluia, vient de rencontrer un bon catholique.', '12€92\r\n', '3€', 'Philippe De Chauveron', 'Christian Clavier <br>\r\nChantal Lauby <br>\r\nAry Abittan <br>\r\nFrédéric Chau <br>\r\nMedi Sadoun <br>\r\nFrédérique Bel <br>\r\nNoom Diawara\r\nJulia Piaton', 'Français/Anglais', 'Contenue du dvd', 'DVD Zone 2', 'Warner Home Video', 'Tous public', 'color', 'stéreo', 'pal ', 'annime2.png', 'annime1.png', 'dragon.png', 'monstre.png', 'thor.png'),
+(1, 1, '2018-09-24', 'Qu\'est-ce qu\'on a fait au bon Dieu ?', '213dda6d8b70872c77cfafe2a1c8abe8.png', 'Claude et Marie Verneuil, issus de la grande bourgeoisie catholique provinciale sont des parents plutôt ', '12€92\r\n', '3€', 'Philippe De Chauveron', 'Christian Clavier <br>\r\nChantal Lauby <br>\r\nAry Abittan <br>\r\nFrédéric Chau <br>\r\nMedi Sadoun <br>\r\nFrédérique Bel <br>\r\nNoom Diawara\r\nJulia Piaton', 'Français/Anglais', 'Contenue du dvd', 'DVD Zone 2', 'Warner Home Video', 'Tous public', 'color', 'stéreo', 'pal ', 'annime2.png', 'annime1.png', 'dragon.png', 'monstre.png', 'thor.png'),
 (2, 1, '2017-08-09', 'À bras ouverts', 'annime2.png', 'Figure de la scène littéraire et médiatique française, Jean-Etienne Fougerole est un intellectuel humaniste marié à une riche héritière déconnectée des réalités. Alors que Fougerole fait la promotion dans un débat télévisé de son nouveau roman «A bras ouverts», invitant les plus aisés à accueillir chez eux les personnes dans le besoin, son opposant le met au défi d\'appliquer ce qu\'il préconise dans son ouvrage. Coincé et piqué au vif, Fougerole prend au mot son adversaire et accepte le challenge pour ne pas perdre la face. Mais dès le soir-même, on sonne à la porte de sa somptueuse maison de Marnes-la-coquette… Les convictions des Fougerole vont être mises à rude épreuve !', '10€', '8€', 'Philippe De Chauveron', 'Christian Clavier <br>\r\nAry Abittan <br>\r\nElsa Zylberstein <br>\r\nCyril Lecomte <br>\r\nMirela Nicolau <br>\r\nNanou Garcia <br>\r\nOscar Berthe', 'Français', 'Dvd du film (88min)', 'Blu Ray', 'Warner Home Video', 'Tous public', 'color', 'stereo ', 'pal', 'annime1.png', 'thor.png', 'dragon.png', 'ironman.png', 'monstre.png'),
 (4, 1, '2017-12-26', 'Overdrive', 'overdrive.png', 'Les frères Andrew et Garrett Foster sont des pilotes d\'exception, mais aussi des voleurs d\'exception. Leur spécialité : voler les voitures les plus chères au monde. A Marseille, ils parviennent à dérober une sublime Bugatti 1937, joyau de l’exceptionnelle collection de Jacomo Morier, parrain de la Mafia locale.  Ce dernier décide alors d’utiliser leur talent à son profit contre son ennemi juré, Max Klemp. Mais s’ils acceptent de rentrer dans ce jeu, c’est qu’ils ont en réalité conçu un coup d’une audace inégalée.', '16€99', '13€30', 'Antonio Negret', 'Scott Eastwood <br>\r\nFreddie Thorp <br>\r\nAna De Armas <br>\r\nSimon Abkarian <br>\r\nClemens Schick <br>\r\nGaia Weiss <br>', 'Français/Anglais', 'Dvd du film (79min)', 'Blu Ray', 'TF1', 'Tous public', 'color', 'stereo', 'pal', 'ironman.png', 'thor.png', 'harrypotter.png', 'starwar.png', 'chasseurdesorcier.png'),
 (5, 1, '2017-12-23', 'La Belle et la Bête', 'romance1.png', 'Fin du XVIIIè siècle, dans un petit village français. Belle, jeune fille rêveuse et passionnée de littérature, vit avec son père, un vieil inventeur farfelu. S\'étant perdu une nuit dans la fôret, ce dernier se réfugie au château de la Bête, qui le jette au cachot. Ne pouvant supporter de voir son père emprisonné, Belle accepte alors de prendre sa place, ignorant que sous le masque du monstre se cache un Prince Charmant tremblant d\'amour pour elle, mais victime d\'une terrible malédiction.', '15€', '8€', 'Bill Condon', 'Emma Watson <br>\r\nKevin Kline <br>\r\nLuke Evans <br>\r\nDan Stevens <br>\r\nAudra McDonald <br>\r\nEmma Thompson <br>\r\nEwan McGregor\r\nJosh Gad\r\nStanley Tucci', 'Anglais/Français', 'Dvd du film (129min)', 'DVD Zone 2', 'Walt Disney Records', 'Tous public', 'color', 'stereo', 'pal', 'romance1.png', 'annime2.png', 'annime1.png', 'annime.png', 'ironman.png'),
@@ -222,7 +223,7 @@ INSERT INTO `dvdmoovie_category` (`id`, `dvdmoovie_id`, `categorymoovie_id`) VAL
 (20, 12, 4),
 (21, 7, 4),
 (22, 9, 4),
-(25, 1, 1);
+(30, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -241,7 +242,6 @@ CREATE TABLE `dvdserie_category` (
 --
 
 INSERT INTO `dvdserie_category` (`id`, `dvd_serie_id`, `categoryserie_id`) VALUES
-(1, 1, 1),
 (2, 2, 1),
 (3, 3, 2),
 (5, 5, 3),
@@ -263,7 +263,8 @@ INSERT INTO `dvdserie_category` (`id`, `dvd_serie_id`, `categoryserie_id`) VALUE
 (23, 4, 3),
 (24, 3, 5),
 (25, 13, 3),
-(26, 13, 5);
+(26, 13, 5),
+(28, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -328,6 +329,7 @@ INSERT INTO `dvd_serie` (`id`, `title`, `image`, `summary`, `prix`, `prix2`, `re
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `is_admin` tinyint(4) DEFAULT NULL,
   `lastname` varchar(100) NOT NULL,
   `firstname` varchar(100) NOT NULL,
@@ -339,9 +341,14 @@ CREATE TABLE `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `is_admin`, `lastname`, `firstname`, `email`, `password`) VALUES
-(9, 1, 'compoint', 'laure', 'AA@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
-(10, 0, 'lk;j,hnbg', 'karine', 'ss@g', '5d41402abc4b2a76b9719d911017c592');
+INSERT INTO `user` (`id`, `image`, `is_admin`, `lastname`, `firstname`, `email`, `password`) VALUES
+(41, 'user.jpg', 1, 'Admin', 'Laure', 'Admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3'),
+(42, 'paysage.jpg', 0, 'PasAdmin', 'User', 'PasAdmin@gmail.com', 'ae4e268a31b839566f62b259fb3fd9bc'),
+(43, NULL, NULL, 'eg', 'zfe', 'gttr@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
+(44, NULL, NULL, 'r', 'evf', 'rtkii@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
+(45, NULL, NULL, 'E', 'FE', 'ERGT@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
+(46, NULL, NULL, 'RGRT', 'FD', 'FHUY@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
+(47, NULL, NULL, 'ryoejl', 'gej', 'isjffn@gmail.com', 'd7a84628c025d30f7b2c52c958767e76');
 
 --
 -- Index pour les tables déchargées
@@ -424,7 +431,7 @@ ALTER TABLE `commentaire`
 -- AUTO_INCREMENT pour la table `commentaire_produitserie`
 --
 ALTER TABLE `commentaire_produitserie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT pour la table `dvdmoovie`
 --
@@ -434,12 +441,12 @@ ALTER TABLE `dvdmoovie`
 -- AUTO_INCREMENT pour la table `dvdmoovie_category`
 --
 ALTER TABLE `dvdmoovie_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT pour la table `dvdserie_category`
 --
 ALTER TABLE `dvdserie_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT pour la table `dvd_serie`
 --
@@ -449,7 +456,7 @@ ALTER TABLE `dvd_serie`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

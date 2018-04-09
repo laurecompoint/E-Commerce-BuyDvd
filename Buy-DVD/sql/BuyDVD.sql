@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  lun. 09 avr. 2018 à 10:24
+-- Généré le :  lun. 09 avr. 2018 à 19:46
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.8
 
@@ -170,7 +170,7 @@ CREATE TABLE `dvdmoovie` (
 --
 
 INSERT INTO `dvdmoovie` (`id`, `is_published`, `created_at`, `title`, `image`, `summary`, `prix`, `prix2`, `realisateur`, `acteur`, `language_subtitle`, `content`, `format`, `editeur`, `public`, `type_color`, `stereo`, `qualite`, `imageOne`, `imageTwo`, `imageThree`, `imageFoor`, `imageFive`) VALUES
-(1, 1, '2018-09-24', 'Qu\'est-ce qu\'on a fait au bon Dieu ?', '213dda6d8b70872c77cfafe2a1c8abe8.png', 'Claude et Marie Verneuil, issus de la grande bourgeoisie catholique provinciale sont des parents plutôt ', '12€92\r\n', '3€', 'Philippe De Chauveron', 'Christian Clavier <br>\r\nChantal Lauby <br>\r\nAry Abittan <br>\r\nFrédéric Chau <br>\r\nMedi Sadoun <br>\r\nFrédérique Bel <br>\r\nNoom Diawara\r\nJulia Piaton', 'Français/Anglais', 'Contenue du dvd', 'DVD Zone 2', 'Warner Home Video', 'Tous public', 'color', 'stéreo', 'pal ', 'annime2.png', 'annime1.png', 'dragon.png', 'monstre.png', 'thor.png'),
+(1, 1, '2018-09-24', 'Qu\'est-ce qu\'on a fait au bon Dieu ?', '213dda6d8b70872c77cfafe2a1c8abe8.png', 'Claude et Marie Verneuil, issus de la grande bourgeoisie catholique provinciale sont des parents plutôt \"vieille France\". Mais ils se sont toujours obligés à faire preuve d\'ouverture d\'esprit...Les pilules furent cependant bien difficiles à avaler quand leur première fille épousa un musulman, leur seconde un juif et leur troisième un chinois. Leurs espoirs de voir enfin l\'une d\'elles se marier à l\'église se cristallisent donc sur la cadette, qui, alléluia, vient de rencontrer un bon catholique.', '12€92\r\n', '3€', 'Philippe De Chauveron', 'Christian Clavier <br>\r\nChantal Lauby <br>\r\nAry Abittan <br>\r\nFrédéric Chau <br>\r\nMedi Sadoun <br>\r\nFrédérique Bel <br>\r\nNoom Diawara\r\nJulia Piaton', 'Français/Anglais', 'Contenue du dvd', 'DVD Zone 2', 'Warner Home Video', 'Tous public', 'color', 'stéreo', 'pal ', 'annime2.png', 'annime1.png', 'dragon.png', 'monstre.png', 'thor.png'),
 (2, 1, '2017-08-09', 'À bras ouverts', 'annime2.png', 'Figure de la scène littéraire et médiatique française, Jean-Etienne Fougerole est un intellectuel humaniste marié à une riche héritière déconnectée des réalités. Alors que Fougerole fait la promotion dans un débat télévisé de son nouveau roman «A bras ouverts», invitant les plus aisés à accueillir chez eux les personnes dans le besoin, son opposant le met au défi d\'appliquer ce qu\'il préconise dans son ouvrage. Coincé et piqué au vif, Fougerole prend au mot son adversaire et accepte le challenge pour ne pas perdre la face. Mais dès le soir-même, on sonne à la porte de sa somptueuse maison de Marnes-la-coquette… Les convictions des Fougerole vont être mises à rude épreuve !', '10€', '8€', 'Philippe De Chauveron', 'Christian Clavier <br>\r\nAry Abittan <br>\r\nElsa Zylberstein <br>\r\nCyril Lecomte <br>\r\nMirela Nicolau <br>\r\nNanou Garcia <br>\r\nOscar Berthe', 'Français', 'Dvd du film (88min)', 'Blu Ray', 'Warner Home Video', 'Tous public', 'color', 'stereo ', 'pal', 'annime1.png', 'thor.png', 'dragon.png', 'ironman.png', 'monstre.png'),
 (4, 1, '2017-12-26', 'Overdrive', 'overdrive.png', 'Les frères Andrew et Garrett Foster sont des pilotes d\'exception, mais aussi des voleurs d\'exception. Leur spécialité : voler les voitures les plus chères au monde. A Marseille, ils parviennent à dérober une sublime Bugatti 1937, joyau de l’exceptionnelle collection de Jacomo Morier, parrain de la Mafia locale.  Ce dernier décide alors d’utiliser leur talent à son profit contre son ennemi juré, Max Klemp. Mais s’ils acceptent de rentrer dans ce jeu, c’est qu’ils ont en réalité conçu un coup d’une audace inégalée.', '16€99', '13€30', 'Antonio Negret', 'Scott Eastwood <br>\r\nFreddie Thorp <br>\r\nAna De Armas <br>\r\nSimon Abkarian <br>\r\nClemens Schick <br>\r\nGaia Weiss <br>', 'Français/Anglais', 'Dvd du film (79min)', 'Blu Ray', 'TF1', 'Tous public', 'color', 'stereo', 'pal', 'ironman.png', 'thor.png', 'harrypotter.png', 'starwar.png', 'chasseurdesorcier.png'),
 (5, 1, '2017-12-23', 'La Belle et la Bête', 'romance1.png', 'Fin du XVIIIè siècle, dans un petit village français. Belle, jeune fille rêveuse et passionnée de littérature, vit avec son père, un vieil inventeur farfelu. S\'étant perdu une nuit dans la fôret, ce dernier se réfugie au château de la Bête, qui le jette au cachot. Ne pouvant supporter de voir son père emprisonné, Belle accepte alors de prendre sa place, ignorant que sous le masque du monstre se cache un Prince Charmant tremblant d\'amour pour elle, mais victime d\'une terrible malédiction.', '15€', '8€', 'Bill Condon', 'Emma Watson <br>\r\nKevin Kline <br>\r\nLuke Evans <br>\r\nDan Stevens <br>\r\nAudra McDonald <br>\r\nEmma Thompson <br>\r\nEwan McGregor\r\nJosh Gad\r\nStanley Tucci', 'Anglais/Français', 'Dvd du film (129min)', 'DVD Zone 2', 'Walt Disney Records', 'Tous public', 'color', 'stereo', 'pal', 'romance1.png', 'annime2.png', 'annime1.png', 'annime.png', 'ironman.png'),
@@ -343,12 +343,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `image`, `is_admin`, `lastname`, `firstname`, `email`, `password`) VALUES
 (41, 'user.jpg', 1, 'Admin', 'Laure', 'Admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3'),
-(42, 'paysage.jpg', 0, 'PasAdmin', 'User', 'PasAdmin@gmail.com', 'ae4e268a31b839566f62b259fb3fd9bc'),
-(43, NULL, NULL, 'eg', 'zfe', 'gttr@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
-(44, NULL, NULL, 'r', 'evf', 'rtkii@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
-(45, NULL, NULL, 'E', 'FE', 'ERGT@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
-(46, NULL, NULL, 'RGRT', 'FD', 'FHUY@gmail.com', 'd7a84628c025d30f7b2c52c958767e76'),
-(47, NULL, NULL, 'ryoejl', 'gej', 'isjffn@gmail.com', 'd7a84628c025d30f7b2c52c958767e76');
+(42, 'paysage.jpg', 0, 'PasAdmin', 'User', 'PasAdmin@gmail.com', 'ae4e268a31b839566f62b259fb3fd9bc');
 
 --
 -- Index pour les tables déchargées
@@ -456,7 +451,7 @@ ALTER TABLE `dvd_serie`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

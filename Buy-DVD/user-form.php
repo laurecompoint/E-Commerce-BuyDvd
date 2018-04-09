@@ -13,7 +13,7 @@ if(isset($_POST['update'])){
 	);
 
 
-	$result = $query->execute(
+	$resultUser = $query->execute(
 		[
 			'firstname' => $_POST['firstname'],
 			'lastname' => $_POST['lastname'],
@@ -24,7 +24,7 @@ if(isset($_POST['update'])){
 	);
 
 
-
+	if($resultUser){
 	if(isset($_FILES['image'])){
 
 						$allowed_extensions = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
@@ -33,6 +33,7 @@ if(isset($_POST['update'])){
 						if ( in_array($my_file_extension , $allowed_extensions) ){
 
 
+				if(isset($_POST['current-image'])){
 					unlink('img/imguser/' . $_POST['current-image']);
 				}
 
@@ -52,7 +53,7 @@ if(isset($_POST['update'])){
 								);
 						}
 
-
+}
 				header('location:user-information.php');
 				exit;
 		}
@@ -60,7 +61,7 @@ if(isset($_POST['update'])){
 		$message = 'Erreur.';
 	}
 
-
+}
 
 if(isset($_GET['user_id']) && isset($_GET['action']) && $_GET['action'] == 'edit'){
 

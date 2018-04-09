@@ -9,6 +9,15 @@ if(!isset($_SESSION['is_admin']) OR $_SESSION['is_admin'] == 0){
 
 if(isset($_GET['user_id']) && isset($_GET['action']) && $_GET['action'] == 'delete'){
 
+
+	$query = $db->prepare('SELECT image FROM user WHERE id = ?');
+	$query->execute(array($_GET['user_id']));
+	$imageToDelete = $query->fetch();
+
+	if($imageToDelete){ //si différent de NULL
+		unlink('../img/imguser/' . $imageToDelete["image"]);
+	}
+
 	$query = $db->prepare('DELETE FROM user WHERE id = ?');
 	$result = $query->execute(
 		[
@@ -72,7 +81,7 @@ $users = $query->fetchall();
 							<?php foreach($users as $user): ?>
 
 							<tr>
-								
+
 								<th><?php echo htmlentities($user['id']); ?></th>
 								<td><?php echo htmlentities($user['firstname']); ?></td>
 								<td><?php echo htmlentities($user['lastname']); ?></td>

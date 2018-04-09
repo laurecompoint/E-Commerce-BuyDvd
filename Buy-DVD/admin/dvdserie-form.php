@@ -33,14 +33,14 @@ if(isset($_POST['save'])){
 		]
     );
 
-		$lastInsertedArticleId = $db->lastInsertId();
+		$lastInsertedProduitId = $db->lastInsertId();
 
 		foreach ($_POST['categories'] as $categoryserie_id) {
 
 			$query = $db->prepare('INSERT INTO dvdserie_category (dvd_serie_id, categoryserie_id) VALUES (?, ?)');
 	    $newSerie = $query->execute(
 			[
-			  $lastInsertedArticleId,
+			  $lastInsertedProduitId,
 			  $categoryserie_id,
 
 			]
@@ -66,7 +66,7 @@ if(isset($_POST['save'])){
 
 			 $result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
 
-			 $lastInsertarticleId =  $db->lastInsertId();
+			 $lastInsertImageId = (int) $db->lastInsertId();
 
 
 				 $query = $db->prepare('UPDATE dvd_serie SET
@@ -77,7 +77,7 @@ if(isset($_POST['save'])){
 				 $resultUpdateImage = $query->execute(
 		       [
 		         'image' =>$new_file_name . '.' . $my_file_extension,
-		         'id' => $lastInsertarticleId
+		         'id' => $lastInsertImageId
 		   		]
 		     );
 
@@ -88,7 +88,7 @@ if(isset($_POST['save'])){
 		exit;
     }
 	else{
-		$message = "Impossible d'enregistrer le nouvel article...";
+		$message = "Impossible d'enregistrer le nouvel Produit...";
 	}
 }
 
@@ -188,7 +188,7 @@ if($resultSerie){
 					}
 			}
 
-			header('location:article-list.php');
+			header('location:dvdserie-list.php');
 			exit;
 	}
 else{

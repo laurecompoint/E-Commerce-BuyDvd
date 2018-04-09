@@ -19,7 +19,7 @@ if(isset($_GET['dvd_serie_id']) && isset($_GET['action']) && $_GET['action'] == 
 		unlink('../img/imgserie/imgproduit/' . $imageToDelete["image"]);
 	}
 
-	$query = $db->prepare('DELETE FROM dvdserie_categoryserie WHERE dvd_serie_id = ?');
+	$query = $db->prepare('DELETE FROM dvdserie_category WHERE dvd_serie_id = ?');
 	$result = $query->execute(
 		[
 			$_GET['dvd_serie_id']
@@ -100,7 +100,7 @@ $dvdseries = $query->fetchall();
 								</td>
 								<td class="d-flex justify-content-end">
 									<a href="dvdserie-form.php?dvd_serie_id=<?php echo $dvdserie['id']; ?>&action=edit" class="btn button mr-1">Modifier</a>
-									<a onclick="return confirm('Are you sure?')" href="dvdserie-list.php?dvd_serie_id=<?php echo $article['id']; ?>&action=delete" class="btn btn-danger mr-1">Supprimer</a>
+									<a onclick="return confirm('Are you sure?')" href="dvdserie-list.php?dvd_serie_id=<?php echo $dvdserie['id']; ?>&action=delete" class="btn btn-danger mr-1">Supprimer</a>
 								</td>
 							</tr>
 

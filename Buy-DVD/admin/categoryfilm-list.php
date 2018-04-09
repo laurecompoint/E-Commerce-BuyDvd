@@ -9,6 +9,15 @@ if(!isset($_SESSION['is_admin']) OR $_SESSION['is_admin'] == 0){
 
 if(isset($_GET['categorymoovie_id']) && isset($_GET['action']) && $_GET['action'] == 'delete'){
 
+	$query = $db->prepare('SELECT image FROM categorymoovie WHERE id = ?');
+	$query->execute(array($_GET['categorymoovie_id']));
+	$imageToDelete = $query->fetch();
+
+	if($imageToDelete){ //si différent de NULL
+		unlink('../img/imgserie/imgcategory/' . $imageToDelete["image"]);
+	}
+
+
 	$query = $db->prepare('DELETE FROM categorymoovie WHERE id = ?');
 	$result = $query->execute(
 		[

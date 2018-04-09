@@ -7,7 +7,7 @@ if(!isset($_SESSION['is_admin']) OR $_SESSION['is_admin'] == 0){
 	exit;
 }
 
-if(isset($_GET['dvd_moovie_id']) && isset($_GET['action']) && $_GET['action'] == 'delete'){
+if(isset($_GET['dvdmoovie_id']) && isset($_GET['action']) && $_GET['action'] == 'delete'){
 
 	$query = $db->prepare('SELECT image FROM dvdmoovie WHERE id = ?');
 	$query->execute(array($_GET['dvdmoovie_id']));
@@ -17,7 +17,7 @@ if(isset($_GET['dvd_moovie_id']) && isset($_GET['action']) && $_GET['action'] ==
 		unlink('../img/imgfilm/imgproduit/' . $imageToDelete["image"]);
 	}
 
-	$query = $db->prepare('DELETE FROM dvdmoovie_categorymoovie WHERE dvdmoovie_id = ?');
+	$query = $db->prepare('DELETE FROM dvdmoovie_category WHERE dvdmoovie_id = ?');
 	$result = $query->execute(
 		[
 			$_GET['dvdmoovie_id']
@@ -27,7 +27,7 @@ if(isset($_GET['dvd_moovie_id']) && isset($_GET['action']) && $_GET['action'] ==
 	$query = $db->prepare('DELETE FROM dvdmoovie WHERE id = ?');
 	$result = $query->execute(
 		[
-			$_GET['dvd_moovie_id']
+			$_GET['dvdmoovie_id']
 		]
 	);
 

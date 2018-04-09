@@ -36,7 +36,7 @@ if(isset($_POST['save'])){
 
 				 $result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
 
-				 $lastInsertarticleId = (int) $db->lastInsertId();
+				 $lastInsertImageId = (int) $db->lastInsertId();
 
 
 					 $query = $db->prepare('UPDATE user SET
@@ -47,7 +47,7 @@ if(isset($_POST['save'])){
 					 $resultUpdateImage = $query->execute(
 			       [
 			         'image' =>$new_file_name . '.' . $my_file_extension,
-			         'id' => $lastInsertarticleId
+			         'id' => $lastInsertImageId
 			   		]
 			     );
 

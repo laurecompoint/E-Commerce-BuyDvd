@@ -33,14 +33,14 @@ if(isset($_POST['save'])){
 
 
 
-		$lastInsertedArticleId = $db->lastInsertId();
+		$lastInsertedProduitId = $db->lastInsertId();
 
 		foreach ($_POST['categories'] as $categorymoovie_id) {
 
 			$query = $db->prepare('INSERT INTO dvdmoovie_category (dvdmoovie_id, categorymoovie_id) VALUES (?, ?)');
 	    $newFilm = $query->execute(
 			[
-			  $lastInsertedArticleId,
+			  $lastInsertedProduitId,
 			  $categorymoovie_id,
 
 			]
@@ -66,7 +66,7 @@ if(isset($_POST['save'])){
 
 			 $result = move_uploaded_file( $_FILES['image']['tmp_name'], $destination);
 
-			 $lastInsertarticleId = (int) $db->lastInsertId();
+			 $lastInsertProduitId = (int) $db->lastInsertId();
 
 
 				 $query = $db->prepare('UPDATE dvdmoovie SET
@@ -77,7 +77,7 @@ if(isset($_POST['save'])){
 				 $resultUpdateImage = $query->execute(
 		       [
 		         'image' =>$new_file_name . '.' . $my_file_extension,
-		         'id' => $lastInsertarticleId
+		         'id' => $lastInsertProduitId
 		   		]
 		     );
 
@@ -88,7 +88,7 @@ if(isset($_POST['save'])){
 		exit;
     }
 	else{
-		$message = "Impossible d'enregistrer le nouvel article...";
+		$message = "Impossible d'enregistrer le nouvel Produit...";
 	}
 }
 
